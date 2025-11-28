@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalXpress – Rent & Electricity</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== TOP NAVIGATION ====== -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="index.html">Expenses</a></li>
+        <li><a href="rent.html" class="active">Rent & Electricity</a></li>
+    </ul>
+</nav>
+
+<header class="banner">
+    <div class="banner-text">
+        <h1>Rent & Electricity</h1>
+        <p>Manage monthly payments</p>
+    </div>
+</header>
+
+<div class="container">
+    <button class="darkBtn" onclick="toggleDark()">🌙</button>
+
+    <h2>Add Payment</h2>
+    <label>Select Person</label>
+    <select id="rentPersonSelect">
+        <option value="">Choose member...</option>
+    </select>
+
+    <label>Payment Type</label>
+    <select id="paymentType">
+        <option value="Room Rent">Room Rent</option>
+        <option value="Electricity">Electricity</option>
+    </select>
+
+    <label>Amount</label>
+    <input id="paymentAmount" placeholder="Enter amount">
+
+    <label>Month</label>
+    <select id="paymentMonth">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+
+    <label>Year</label>
+    <input type="number" id="paymentYear" value="2025" min="2000" max="2100">
+
+    <button class="btn primary wide" onclick="addPayment()">Add Payment</button>
+
+    <h2>Monthly Payments</h2>
+    <label>Select Year</label>
+    <input type="number" id="filterYear" value="2025" min="2000" max="2100">
+    <button class="btn accent" onclick="filterByYear()">Show</button>
+
+    <div id="monthTables"></div>
+
+    <footer>© LocalXpress | Powered by Ankit</footer>
+</div>
+
+<script src="rent.js"></script>
+</body>
+</html>

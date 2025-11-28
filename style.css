@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* ===== Top Navigation ===== */
+.top-nav {
+    width: 100%;
+    background: var(--primary);
+    padding: 10px 0;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav ul li {
+    margin: 0 20px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.top-nav ul li a:hover,
+.top-nav ul li a.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+:root {
+    --bg: #f0f4ff;
+    --card: #ffffff;
+    --text: #1e1e1e;
+    --primary: #6c5ce7;
+    --accent: #00cec9;
+}
+
+body.dark {
+    --bg: #0d1117;
+    --card: #1a1a1a;
+    --text: #e6e6e6;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.banner {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    background: var(--card);
+    margin: -60px auto 40px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    background: var(--card);
+    color: var(--text);
+}
+
+.btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.primary { background: var(--primary); }
+.accent { background: var(--accent); }
+.wide { width: 100%; margin-top: 10px; }
+
+.row { display: flex; gap: 10px; }
+
+.people-list { margin-top: 20px; }
+.person-item {
+    padding: 14px;
+    background: var(--card);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.person-item:hover { background: var(--primary); color: white; transform: scale(1.03); }
+
+.details {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    background: var(--card);
+}
+
+.hidden { display: none; }
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.darkBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 13px;
+    border-radius: 50%;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+}

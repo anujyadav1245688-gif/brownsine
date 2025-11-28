@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalXpress – Smart Expense Manager</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- ====== TOP NAVIGATION ====== -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="index.html" class="active">Expenses</a></li>
+        <li><a href="rent.html">Rent & Electricity</a></li>
+    </ul>
+</nav>
+
+<header class="banner">
+    <div class="slides">
+        <img src="banner1.jpg" class="slide active">
+        <img src="banner2.jpg" class="slide">
+        <img src="banner3.jpg" class="slide">
+    </div>
+    <div class="banner-text">
+        <h1>LocalXpress</h1>
+        <p>Smart Daily Expense Manager</p>
+    </div>
+</header>
+
+<div class="container">
+    <button class="darkBtn" onclick="toggleDark()">🌙</button>
+
+    <h2>Add Person</h2>
+    <div class="row">
+        <input id="personInput" placeholder="Enter name">
+        <button class="btn primary" onclick="addPerson()">Add</button>
+    </div>
+
+    <hr>
+
+    <h2>Add Expenses</h2>
+    <label>Select Person</label>
+    <select id="personSelect">
+        <option value="">Choose member...</option>
+    </select>
+
+    <label>Enter Expenses (e.g. 40+60+100)</label>
+    <input id="amountInput" placeholder="40+60+100">
+
+    <button class="btn accent wide" onclick="saveExpenses()">Add Expenses</button>
+
+    <h2>Members Summary</h2>
+    <div id="peopleList" class="people-list"></div>
+
+    <div id="personDetails" class="details hidden">
+        <h2 id="detailName"></h2>
+        <p id="detailStats"></p>
+        <table id="detailTable" class="table"></table>
+    </div>
+
+    <button class="btn primary wide" onclick="calculate()">Show Month Summary</button>
+    <div id="analysis"></div>
+    <canvas id="chart" style="display:none; margin-top:30px;"></canvas>
+
+    <footer>© LocalXpress | Powered by Ankit</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
